@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap");
+
+:root {
+    --bg-1: #0f1020;
+    --bg-2: #1d1438;
+    --bg-3: #0a3a3c;
+    --text: #f5f7ff;
+    --muted: #c8cce2;
+    --accent: #ff7a18;
+    --accent-2: #24c6dc;
+    --card: rgba(255, 255, 255, 0.08);
+    --card-border: rgba(255, 255, 255, 0.2);
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--text);
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 122, 24, 0.25), transparent 28%),
+        radial-gradient(circle at 85% 15%, rgba(36, 198, 220, 0.2), transparent 32%),
+        linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-3) 100%);
+    padding: 28px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+    opacity: 0.4;
+    animation: floatBlob 10s ease-in-out infinite;
+}
+
+body::before {
+    background: #ff7a18;
+    top: -80px;
+    left: -110px;
+}
+
+body::after {
+    background: #24c6dc;
+    right: -140px;
+    bottom: -100px;
+    animation-delay: -4s;
+}
+
+header,
+main,
+footer {
+    width: min(1050px, 100%);
+    margin: 0 auto;
+}
+
+header {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    margin-bottom: 28px;
+    animation: slideDown 0.8s ease;
+}
+
+header p {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+header a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+}
+
+header a:hover {
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+main {
+    display: grid;
+    gap: 24px;
+}
+
+main > section {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
+    animation: fadeUp 0.8s ease both;
+}
+
+main > section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+main > section:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+section:first-of-type p:first-child {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+h1 {
+    font-family: "Syne", "Segoe UI", sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #ffffff, #b8f6ff 45%, #ffd3b0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+i {
+    display: inline-block;
+    color: #ffe8d3;
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+    position: relative;
+}
+
+i::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+section:first-of-type p:last-child {
+    color: var(--muted);
+    max-width: 62ch;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+fieldset {
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 18px;
+    padding: 20px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+}
+
+legend {
+    font-family: "Syne", "Segoe UI", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 0 10px;
+    color: #fff2e4;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.7;
+    font-size: 1rem;
+    color: #eaf7ff;
+}
+
+mark {
+    background: linear-gradient(120deg, rgba(255, 122, 24, 0.22), rgba(36, 198, 220, 0.22));
+    color: #ffffff;
+    padding: 3px 6px;
+    border-radius: 6px;
+}
+
+form {
+    display: grid;
+    gap: 12px;
+    max-width: 560px;
+}
+
+h3 {
+    font-family: "Syne", "Segoe UI", sans-serif;
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    color: #fff2e4;
+    margin-bottom: 2px;
+}
+
+input[type="email"] {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--text);
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+input[type="email"]::placeholder {
+    color: #dbe0fb;
+}
+
+input[type="email"]:focus {
+    border-color: #ffd3b0;
+    box-shadow: 0 0 0 4px rgba(255, 122, 24, 0.2);
+    transform: translateY(-1px);
+}
+
+input[type="submit"] {
+    width: fit-content;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 22px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    color: #1b132f;
+    background: linear-gradient(90deg, #ffba7b, #8df1ff);
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-2px) scale(1.03);
+    filter: brightness(1.05);
+}
+
+footer {
+    margin-top: 24px;
+    text-align: center;
+    color: #d8dcf6;
+    font-size: 0.92rem;
+    padding-bottom: 16px;
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes floatBlob {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(20px, -16px) scale(1.08);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 16px;
+    }
+
+    main > section {
+        padding: 22px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+}
