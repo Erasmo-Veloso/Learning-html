@@ -1,254 +1,199 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Erasmo Veloso | Carreira</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="layout.css" />
   </head>
   <body>
-    <header>
-      <p>
+    <div class="cursor" id="cursor"></div>
+    <div class="progress-wrap"><div class="progress" id="progress"></div></div>
+
+    <nav class="top" id="nav">
+      <a href="../index.html" class="brand"><span class="brand-mark"></span>Erasmo Veloso</a>
+      <div class="links">
         <a href="../index.html">Home</a>
         <a href="blog.html">Blog</a>
-        <a href="carreira.html">Carreira</a>
+        <a href="carreira.html" class="active">Carreira</a>
         <a href="contato.html">Contato</a>
-      </p>
-    </header>
+      </div>
+      <div class="end">
+        <span class="time" id="clock">LUANDA · --:--</span>
+        <a href="#contato" class="cta-small">Projetos</a>
+      </div>
+    </nav>
 
-    <main>
-      <section>
-        <h1>Minha jornada como Desenvolvedor</h1>
-        <p>
+    <div class="side-index">
+      <a href="#hero" data-for="hero"><span class="tick"></span>00</a>
+      <a href="#skills" data-for="skills"><span class="tick"></span>01</a>
+      <a href="#xp" data-for="xp"><span class="tick"></span>02</a>
+      <a href="#news" data-for="news"><span class="tick"></span>03</a>
+      <a href="#contato" data-for="contato"><span class="tick"></span>04</a>
+    </div>
+
+    <section class="hero-page" id="hero">
+      <div class="hero-grid rev">
+        <span class="eyebrow">Carreira</span>
+        <h1>Minha jornada <span class="ser">profissional</span></h1>
+        <p class="lead">
           Experiencias profissionais em desenvolvimento de software com foco em
           produtos digitais, arquiteturas web e entrega continua.
         </p>
-        <p><a href="contato.html">Entre em contato para projetos</a></p>
-      </section>
+      </div>
+    </section>
 
-      <!-- Competencias principais -->
-      <section>
-        <fieldset>
-          <legend>Competencias principais</legend>
-          <p>Principais stacks e habilidades que utilizo no dia a dia.</p>
-
-          <article>
-            <fieldset>
-              <legend>Front-end | Avancado</legend>
-              <p>
-                Interfaces modernas, performaticas e escalaveis com foco em
-                usabilidade.
-              </p>
-              <p>
-                <mark>Next.js</mark>
-                <mark>React.js</mark>
-                <mark>TypeScript</mark>
-                <mark>Tailwind CSS</mark>
-              </p>
-            </fieldset>
+    <section class="page-section" id="skills">
+      <div class="wrap">
+        <div class="chapter-head rev">
+          <span class="num">CAP. 01</span>
+          <span class="label">Competencias principais</span>
+          <span class="meta">[ stack ]</span>
+        </div>
+        <div class="stack">
+          <article class="card rev">
+            <h3>Front-end | Avancado</h3>
+            <p>Interfaces modernas, performaticas e escalaveis com foco em usabilidade.</p>
+            <div class="tag-list">
+              <span class="tag">Next.js</span><span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span>
+            </div>
           </article>
-
-          <article>
-            <fieldset>
-              <legend>Back-end e APIs | Avancado</legend>
-              <p>
-                Implementacao de APIs robustas com autenticacao e boas praticas
-                de performance.
-              </p>
-              <p>
-                <mark>Fastify</mark>
-                <mark>FastAPI</mark>
-                <mark>Express.js</mark>
-                <mark>REST</mark>
-              </p>
-            </fieldset>
+          <article class="card rev">
+            <h3>Back-end e APIs | Avancado</h3>
+            <p>Implementacao de APIs robustas com autenticacao e boas praticas de performance.</p>
+            <div class="tag-list">
+              <span class="tag">Fastify</span><span class="tag">FastAPI</span><span class="tag">Express.js</span><span class="tag">REST</span>
+            </div>
           </article>
-
-          <article>
-            <fieldset>
-              <legend>Banco de Dados | Intermediario/Avancado</legend>
-              <p>
-                Modelagem relacional e consultas otimizadas com foco em
-                confiabilidade.
-              </p>
-              <p>
-                <mark>PostgreSQL</mark>
-                <mark>SQL</mark>
-                <mark>Migrations</mark>
-                <mark>Indexes</mark>
-              </p>
-            </fieldset>
+          <article class="card rev">
+            <h3>Banco de Dados | Intermediario/Avancado</h3>
+            <p>Modelagem relacional e consultas otimizadas com foco em confiabilidade.</p>
+            <div class="tag-list">
+              <span class="tag">PostgreSQL</span><span class="tag">SQL</span><span class="tag">Migrations</span><span class="tag">Indexes</span>
+            </div>
           </article>
-        </fieldset>
-      </section>
+        </div>
+      </div>
+    </section>
 
-      <!-- Experiencia profissional -->
-      <section>
-        <h1>Experiencia profissional</h1>
-
-        <article>
-          <fieldset>
-            <legend>Desenvolvedor Independente</legend>
-            <p><strong>Personal Projects</strong></p>
+    <section class="page-section alt" id="xp">
+      <div class="wrap">
+        <div class="chapter-head rev">
+          <span class="num">CAP. 02</span>
+          <span class="label">Experiencia profissional</span>
+          <span class="meta">[ percurso ]</span>
+        </div>
+        <div class="stack">
+          <article class="card rev">
+            <h3>Desenvolvedor Independente</h3>
+            <div class="meta-row">
+              <span><img src="../images/calendar.svg" alt="" /> 2024 - Atual</span>
+              <span><img src="../images/user.svg" alt="" /> Remoto</span>
+            </div>
             <p>
-              <img src="../images/calendar.svg" alt="" /> 2024 - Atual
-              <img src="../images/user.svg" alt="" /> Remoto
+              Desenvolvimento independente de sistemas digitais, com foco em backend,
+              estrutura de dados e aplicacoes funcionais voltadas para problemas reais.
             </p>
-            <p>
-              Desenvolvimento independente de sistemas digitais, com foco em
-              backend, estrutura de dados e aplicacoes funcionais voltadas para
-              problemas reais.
-            </p>
-
-            <h4>Resultados relevantes</h4>
+            <h4 style="margin-top:14px">Resultados relevantes</h4>
             <ul>
-              <li>
-                Desenvolvi sistemas completos com autenticacao e controle de
-                acesso.
-              </li>
+              <li>Desenvolvi sistemas completos com autenticacao e controle de acesso.</li>
               <li>Estruturei APIs e logica backend para aplicacoes reais.</li>
-              <li>
-                Implementei dashboards e interfaces para visualizacao de dados.
-              </li>
+              <li>Implementei dashboards e interfaces para visualizacao de dados.</li>
             </ul>
+            <div class="tag-list">
+              <span class="tag">Next.js</span><span class="tag">React.js</span><span class="tag">Fastify</span><span class="tag">PostgreSQL</span>
+            </div>
+            <div class="grid-2" style="margin-top:16px">
+              <div class="card">
+                <h4>TelChat</h4>
+                <p>Chat em tempo real via terminal com FastAPI, Redis e Docker.</p>
+                <a class="read-more" href="https://github.com/Erasmo-Veloso/telchat" target="_blank" rel="noopener noreferrer">Repositorio <img src="../images/move-right.svg" alt="" /></a>
+              </div>
+              <div class="card">
+                <h4>BeeCrowd Sync</h4>
+                <p>Automatiza o fluxo de submissoes do BeeCrowd para o GitHub.</p>
+                <a class="read-more" href="https://github.com/Erasmo-Veloso/BeeCrowd-Sync" target="_blank" rel="noopener noreferrer">Repositorio <img src="../images/move-right.svg" alt="" /></a>
+              </div>
+            </div>
+          </article>
 
+          <article class="card rev">
+            <h3>Designer Independente UI/UX</h3>
+            <div class="meta-row">
+              <span><img src="../images/calendar.svg" alt="" /> 2023 - 2025</span>
+              <span><img src="../images/user.svg" alt="" /> Remoto</span>
+            </div>
             <p>
-              <mark>Next.js</mark>
-              <mark>React.js</mark>
-              <mark>Fastify</mark>
-              <mark>PostgreSQL</mark>
+              Desenvolvimento de sistemas digitais com foco em experiencia do utilizador,
+              fluxos claros e interfaces orientadas a resultados.
             </p>
-
-            <h4>Projetos notaveis</h4>
-
-            <fieldset>
-              <legend>TelChat</legend>
-              <p>
-                Chat em tempo real via terminal, desenvolvido para utilizadores
-                que preferem ambientes CLI. Usa FastAPI no backend, Redis para
-                mensagens em tempo real e Docker.
-              </p>
-              <p>
-                <a
-                  href="https://github.com/Erasmo-Veloso/telchat"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Ver repositorio</a
-                >
-              </p>
-              <p>
-                <mark>FastAPI</mark>
-                <mark>Redis</mark>
-                <mark>Docker</mark>
-                <mark>Python</mark>
-              </p>
-            </fieldset>
-
-            <fieldset>
-              <legend>BeeCrowd Sync</legend>
-              <p>
-                Extensao focada em automatizar o fluxo de submissoes do BeeCrowd
-                para o GitHub, integrando front-end em React, backend em
-                Express.js e persistencia em PostgreSQL.
-              </p>
-              <p>
-                <a
-                  href="https://github.com/Erasmo-Veloso/BeeCrowd-Sync"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Ver repositorio</a
-                >
-              </p>
-              <p>
-                <mark>React.js</mark>
-                <mark>Express.js</mark>
-                <mark>TypeScript</mark>
-                <mark>PostgreSQL</mark>
-              </p>
-            </fieldset>
-          </fieldset>
-        </article>
-
-        <article>
-          <fieldset>
-            <legend>Designer Independente UI/UX</legend>
-            <p><strong>Personal Projects</strong></p>
-            <p>
-              <img src="../images/calendar.svg" alt="" /> 2023 - 2025
-              <img src="../images/user.svg" alt="" /> Remoto
-            </p>
-            <p>
-              Desenvolvimento de sistemas digitais com foco em experiencia do
-              utilizador, fluxos claros e interfaces orientadas a resultados.
-            </p>
-
-            <h4>Resultados relevantes</h4>
+            <h4 style="margin-top:14px">Resultados relevantes</h4>
             <ul>
-              <li>
-                Prototipei interfaces orientadas a usabilidade e navegacao
-                simples.
-              </li>
+              <li>Prototipei interfaces orientadas a usabilidade e navegacao simples.</li>
               <li>Modelei jornadas de utilizador para produtos digitais.</li>
-              <li>
-                Documentei componentes visuais para implementacao no front-end.
-              </li>
+              <li>Documentei componentes visuais para implementacao no front-end.</li>
             </ul>
+            <div class="tag-list"><span class="tag">Figma</span></div>
+            <div style="margin-top:12px" class="stack">
+              <a class="read-more" href="https://www.figma.com/design/ZuGAGEuex2JxR7hNBOdGSz/ChatTUI?node-id=0-1&t=qb61VruI9XjuIbHe-1" target="_blank" rel="noopener noreferrer">TelChat no Figma <img src="../images/move-right.svg" alt="" /></a>
+              <a class="read-more" href="https://www.figma.com/design/gkEAty7E8rKWz6Dd1vtPpF/SynkCP?node-id=0-1&t=6xNehc8kz7HcmorI-1" target="_blank" rel="noopener noreferrer">BeeCrowd Sync no Figma <img src="../images/move-right.svg" alt="" /></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <p><mark>Figma</mark></p>
+    <section class="page-section" id="news">
+      <div class="wrap">
+        <div class="chapter-head rev">
+          <span class="num">CAP. 03</span>
+          <span class="label">Fique atualizado</span>
+          <span class="meta">[ newsletter ]</span>
+        </div>
+        <div class="card rev" style="max-width:620px">
+          <p>Receba novidades sobre novos projetos, artigos e insights criativos.</p>
+          <form action="" style="margin-top:10px">
+            <label for="email">Seu melhor email</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required />
+            <input type="submit" value="Inscrever-se" />
+          </form>
+        </div>
+      </div>
+    </section>
 
-            <h4>Projetos notaveis</h4>
-            <p>
-              <a
-                href="https://www.figma.com/design/ZuGAGEuex2JxR7hNBOdGSz/ChatTUI?node-id=0-1&t=qb61VruI9XjuIbHe-1"
-                target="_blank"
-                rel="noopener noreferrer"
-                >TelChat no Figma</a
-              >
-            </p>
-            <p>
-              <a
-                href="https://www.figma.com/design/gkEAty7E8rKWz6Dd1vtPpF/SynkCP?node-id=0-1&t=6xNehc8kz7HcmorI-1"
-                target="_blank"
-                rel="noopener noreferrer"
-                >BeeCrowd Sync no Figma</a
-              >
-            </p>
-          </fieldset>
-        </article>
-      </section>
+    <section class="page-section alt" id="contato">
+      <div class="wrap">
+        <div class="chapter-head rev">
+          <span class="num">CAP. 04</span>
+          <span class="label">Colaboracao</span>
+          <span class="meta">[ contacto ]</span>
+        </div>
+        <div class="card rev" style="max-width:760px">
+          <h3>Vamos construir algo juntos?</h3>
+          <p>
+            Estou aberto a novos projetos, colaboracoes tecnicas e desafios bem
+            estruturados.
+          </p>
+          <a class="read-more" href="mailto:erasmo@veloso.com">Entre em contato <img src="../images/move-right.svg" alt="" /></a>
+        </div>
+      </div>
+    </section>
 
-      <section>
-        <h1>Fique atualizado</h1>
-        <p>
-          Receba novidades sobre novos projetos, artigos e insights criativos.
-        </p>
-        <form action="">
-          <label for="email">Seu melhor email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="example@gmail.com"
-            required
-          />
-          <input type="submit" value="Inscrever-se" />
-        </form>
-      </section>
-
-      <section>
-        <h1>Vamos construir algo juntos?</h1>
-        <p>
-          Estou aberto a novos projetos, colaboracoes tecnicas e desafios bem
-          estruturados.
-        </p>
-        <p><a href="mailto:erasmo@veloso.com">Entre em contato</a></p>
-      </section>
-    </main>
-
-    <br />
-    <br />
-    <footer>
-      <p>Copyright © 2026 Erasmo Veloso. Todos os direitos reservados.</p>
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-note">
+          <span>Copyright © 2026 Erasmo Veloso. Todos os direitos reservados.</span>
+          <span>Carreira</span>
+        </div>
+      </div>
     </footer>
+
+    <script src="layout.js"></script>
   </body>
 </html>

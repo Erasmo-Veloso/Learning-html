@@ -1,109 +1,119 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Erasmo Veloso | Contato</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="layout.css" />
   </head>
   <body>
-    <header>
-      <p>
+    <div class="cursor" id="cursor"></div>
+    <div class="progress-wrap"><div class="progress" id="progress"></div></div>
+
+    <nav class="top" id="nav">
+      <a href="../index.html" class="brand"><span class="brand-mark"></span>Erasmo Veloso</a>
+      <div class="links">
         <a href="../index.html">Home</a>
         <a href="blog.html">Blog</a>
         <a href="carreira.html">Carreira</a>
-        <a href="contato.html">Contato</a>
-      </p>
-    </header>
+        <a href="contato.html" class="active">Contato</a>
+      </div>
+      <div class="end">
+        <span class="time" id="clock">LUANDA · --:--</span>
+        <a href="#formulario" class="cta-small">Mensagem</a>
+      </div>
+    </nav>
 
-    <main>
-      <section>
-        <p>Vamos conversar</p>
-        <h1>Entre em contacto</h1>
-        <p>
+    <div class="side-index">
+      <a href="#hero" data-for="hero"><span class="tick"></span>00</a>
+      <a href="#formulario" data-for="formulario"><span class="tick"></span>01</a>
+      <a href="#dicas" data-for="dicas"><span class="tick"></span>02</a>
+    </div>
+
+    <section class="hero-page" id="hero">
+      <div class="hero-grid rev">
+        <span class="eyebrow">Contato</span>
+        <h1>Entre em <span class="ser">contato</span></h1>
+        <p class="lead">
           Se tens uma ideia, projeto ou oportunidade, envia uma mensagem curta e
           direta. Respondo com foco e sem enrolacao.
         </p>
-        <p>
-          <mark>Projetos</mark>
-          <mark>Oportunidades</mark>
-          <mark>Parcerias</mark>
-        </p>
-      </section>
+        <div class="tag-list">
+          <span class="tag">Projetos</span>
+          <span class="tag">Oportunidades</span>
+          <span class="tag">Parcerias</span>
+        </div>
+      </div>
+    </section>
 
-      <section>
-        <fieldset>
-          <legend>Formulario</legend>
+    <section class="page-section" id="formulario">
+      <div class="wrap">
+        <div class="chapter-head rev">
+          <span class="num">CAP. 01</span>
+          <span class="label">Formulario</span>
+          <span class="meta">[ mensagem ]</span>
+        </div>
+        <div class="card rev" style="max-width:760px">
           <form action="">
-            <p>
-              <label for="name">Nome</label><br />
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="O teu nome"
-                required
-              />
-            </p>
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="O teu nome" required />
 
-            <p>
-              <label for="email">Email</label><br />
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="seu@email.com"
-                required
-              />
-            </p>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required />
 
-            <p>
-              <label for="subject">Assunto</label><br />
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Qual e o tema?"
-                required
-              />
-            </p>
+            <label for="subject">Assunto</label>
+            <input type="text" id="subject" name="subject" placeholder="Qual e o tema?" required />
 
-            <p>
-              <label for="message">Mensagem</label><br />
-              <textarea
-                id="message"
-                name="message"
-                rows="6"
-                placeholder="Conta um pouco sobre a ideia, objetivo ou desafio..."
-                required
-              ></textarea>
-            </p>
+            <label for="message">Mensagem</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Conta um pouco sobre a ideia, objetivo ou desafio..."
+              required
+            ></textarea>
 
-            <p>
-              <input type="submit" value="Enviar mensagem" />
-            </p>
+            <input type="submit" value="Enviar mensagem" />
           </form>
+          <p style="margin-top:10px">Geralmente respondo entre 24 e 48 horas.</p>
+        </div>
+      </div>
+    </section>
 
-          <p>Geralmente respondo entre 24 e 48 horas.</p>
-        </fieldset>
-      </section>
+    <section class="page-section alt" id="dicas">
+      <div class="wrap">
+        <div class="chapter-head rev">
+          <span class="num">CAP. 02</span>
+          <span class="label">O que incluir</span>
+          <span class="meta">[ contexto ]</span>
+        </div>
+        <div class="card rev" style="max-width:760px">
+          <p>Para eu responder melhor, tenta incluir:</p>
+          <ul style="margin-top:12px">
+            <li>Objetivo principal do projeto</li>
+            <li>Prazo ou urgencia</li>
+            <li>Contexto tecnico ou criativo</li>
+            <li>Referencias, se existirem</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <section>
-        <h2>O que incluir</h2>
-        <p>Para eu responder melhor, tenta incluir:</p>
-        <ul>
-          <li>Objetivo principal do projeto</li>
-          <li>Prazo ou urgencia</li>
-          <li>Contexto tecnico ou criativo</li>
-          <li>Referencias, se existirem</li>
-        </ul>
-      </section>
-    </main>
-
-    <br />
-    <br />
-    <footer>
-      <p>Copyright © 2026 Erasmo Veloso. Todos os direitos reservados.</p>
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-note">
+          <span>Copyright © 2026 Erasmo Veloso. Todos os direitos reservados.</span>
+          <span>Contato</span>
+        </div>
+      </div>
     </footer>
+
+    <script src="layout.js"></script>
   </body>
 </html>

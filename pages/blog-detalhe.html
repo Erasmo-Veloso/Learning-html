@@ -1,140 +1,158 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Erasmo Veloso | Blog - A pressa que atrasa</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="layout.css" />
   </head>
   <body>
-    <header>
-      <p>
+    <div class="cursor" id="cursor"></div>
+    <div class="progress-wrap"><div class="progress" id="progress"></div></div>
+
+    <nav class="top" id="nav">
+      <a href="../index.html" class="brand"><span class="brand-mark"></span>Erasmo Veloso</a>
+      <div class="links">
         <a href="../index.html">Home</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html" class="active">Blog</a>
         <a href="carreira.html">Carreira</a>
         <a href="contato.html">Contato</a>
-      </p>
-    </header>
+      </div>
+      <div class="end">
+        <span class="time" id="clock">LUANDA · --:--</span>
+        <a href="#news" class="cta-small">Newsletter</a>
+      </div>
+    </nav>
 
-    <main>
-      <section>
-        <span onclick="javascript: history.go(-1);" style="cursor: pointer"
-          ><img src="../images/arrow-left.svg" alt="" /> Voltar ao Blog</span
-        >
-        <h1>A pressa que atrasa - sobre crescer com profundidade</h1>
-        <p>
-          Quem corre sem direcao costuma chegar antes no lugar errado. Crescer
-          de verdade exige menos velocidade e mais consciencia.
+    <div class="side-index">
+      <a href="#hero" data-for="hero"><span class="tick"></span>00</a>
+      <a href="#artigo" data-for="artigo"><span class="tick"></span>01</a>
+      <a href="#links" data-for="links"><span class="tick"></span>02</a>
+      <a href="#news" data-for="news"><span class="tick"></span>03</a>
+    </div>
+
+    <section class="hero-page" id="hero">
+      <div class="hero-grid rev">
+        <a class="back-link" href="blog.html"><img src="../images/arrow-left.svg" alt="" /> Voltar ao Blog</a>
+        <span class="eyebrow">Artigo</span>
+        <h1>A pressa que <span class="ser">atrasa</span></h1>
+        <p class="lead">
+          Quem corre sem direcao costuma chegar antes no lugar errado. Crescer de
+          verdade exige menos velocidade e mais consciencia.
         </p>
-
-        <p>
-          <mark>carreira</mark>
-          <mark>crescimento</mark>
-          <mark>foco</mark>
-        </p>
-
-        <p>
-          <span
-            ><img src="../images/calendar.svg" alt="" /> 15 de Abril de
-            2026</span
-          >
+        <div class="meta-row">
+          <span><img src="../images/calendar.svg" alt="" /> 15 de Abril de 2026</span>
           <span><img src="../images/clock.svg" alt="" /> 7 min</span>
           <span><img src="../images/user.svg" alt="" /> Erasmo Veloso</span>
-        </p>
-      </section>
+        </div>
+        <div class="tag-list">
+          <span class="tag">carreira</span>
+          <span class="tag">crescimento</span>
+          <span class="tag">foco</span>
+        </div>
+      </div>
+    </section>
 
-      <section>
-        <p>
-          Existe uma crenca silenciosa para quem trabalha com tecnologia: se nao
-          esta sempre a correr, esta atrasado. Todos os dias surge uma nova
-          ferramenta, uma nova tendencia, uma nova comparacao. O problema nao e
-          querer evoluir rapido. O problema e confundir agitacao com progresso.
-        </p>
+    <section class="page-section" id="artigo">
+      <div class="wrap">
+        <div class="chapter-head rev">
+          <span class="num">CAP. 01</span>
+          <span class="label">Conteudo</span>
+          <span class="meta">[ leitura ]</span>
+        </div>
+        <article class="card rev">
+          <p>
+            Existe uma crenca silenciosa para quem trabalha com tecnologia: se nao esta
+            sempre a correr, esta atrasado. Todos os dias surge uma nova ferramenta,
+            uma nova tendencia, uma nova comparacao. O problema nao e querer evoluir
+            rapido. O problema e confundir agitacao com progresso.
+          </p>
+          <h2 style="margin-top:18px">A calma como estrategia</h2>
+          <p>
+            Calma nao e passividade. E a capacidade de agir com intencao. Quando existe
+            clareza, o estudo deixa de ser reacao e passa a ser construcao.
+          </p>
+          <h2 style="margin-top:18px">Troca velocidade por clareza</h2>
+          <p>
+            Antes de decidir o que estudar, pergunta: o que quero construir nos proximos
+            meses? Que lacunas me impedem disso hoje? Estas respostas filtram o ruido e
+            direcionam energia.
+          </p>
+          <h2 style="margin-top:18px">Ciclos curtos e foco real</h2>
+          <p>
+            Trabalha em ciclos de 2 a 4 semanas com um tema por vez. Fecha cada ciclo com
+            algo pratico, mesmo que pequeno. A pratica consolida o conhecimento e revela
+            o que ainda falta.
+          </p>
+          <h2 style="margin-top:18px">A comparacao certa</h2>
+          <p>
+            Comparar com outras pessoas na internet cria ansiedade. A comparacao util e
+            com o teu eu de 30 dias atras: resolves hoje problemas que antes nao resolvias?
+          </p>
+          <h2 style="margin-top:18px">Plano simples para os proximos 60 dias</h2>
+          <ol>
+            <li>Escolhe uma meta tecnica clara.</li>
+            <li>Define duas ou tres competencias que mais impactam essa meta.</li>
+            <li>Organiza ciclos de estudo com um tema por vez.</li>
+            <li>Entrega algo real no fim de cada ciclo.</li>
+            <li>Avalia progresso pela tua propria evolucao.</li>
+          </ol>
+          <p style="margin-top:12px">
+            Crescer rapido impressiona no curto prazo. Crescer com clareza, constancia e
+            profundidade constroi uma carreira que dura.
+          </p>
+        </article>
+      </div>
+    </section>
 
-        <h2>A calma como estrategia</h2>
-        <p>
-          Calma nao e passividade. E a capacidade de agir com intencao. Quando
-          existe clareza, o estudo deixa de ser reacao e passa a ser construcao.
-        </p>
+    <section class="page-section alt" id="links">
+      <div class="wrap">
+        <div class="chapter-head rev">
+          <span class="num">CAP. 02</span>
+          <span class="label">Links recomendados</span>
+          <span class="meta">[ referencia ]</span>
+        </div>
+        <div class="card rev">
+          <ul>
+            <li><a href="https://roadmap.sh" target="_blank" rel="noopener noreferrer">Roadmap.sh</a></li>
+            <li><a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer">Documentacao Next.js</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <h2>Troca velocidade por clareza</h2>
-        <p>
-          Antes de decidir o que estudar, pergunta: o que quero construir nos
-          proximos meses? Que lacunas me impedem disso hoje? Estas respostas
-          filtram o ruido e direcionam energia.
-        </p>
+    <section class="page-section" id="news">
+      <div class="wrap">
+        <div class="chapter-head rev">
+          <span class="num">CAP. 03</span>
+          <span class="label">Receber novidades</span>
+          <span class="meta">[ newsletter ]</span>
+        </div>
+        <div class="card rev" style="max-width:620px">
+          <form action="">
+            <label for="email">O teu melhor email</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required />
+            <input type="submit" value="Inscrever-se" />
+          </form>
+        </div>
+      </div>
+    </section>
 
-        <h2>Ciclos curtos e foco real</h2>
-        <p>
-          Trabalha em ciclos de 2 a 4 semanas com um tema por vez. Fecha cada
-          ciclo com algo pratico, mesmo que pequeno. A pratica consolida o
-          conhecimento e revela o que ainda falta.
-        </p>
-
-        <h2>A comparacao certa</h2>
-        <p>
-          Comparar com outras pessoas na internet cria ansiedade. A comparacao
-          util e com o teu eu de 30 dias atras: resolves hoje problemas que
-          antes nao resolvias?
-        </p>
-
-        <h2>Plano simples para os proximos 60 dias</h2>
-        <ol>
-          <li>Escolhe uma meta tecnica clara.</li>
-          <li>Define duas ou tres competencias que mais impactam essa meta.</li>
-          <li>Organiza ciclos de estudo com um tema por vez.</li>
-          <li>Entrega algo real no fim de cada ciclo.</li>
-          <li>Avalia progresso pela tua propria evolucao.</li>
-        </ol>
-
-        <p>
-          Crescer rapido impressiona no curto prazo. Crescer com clareza,
-          constancia e profundidade constroi uma carreira que dura.
-        </p>
-      </section>
-
-      <section>
-        <h2>Links recomendados</h2>
-        <ul>
-          <li>
-            <a
-              href="https://roadmap.sh"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Roadmap.sh</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://nextjs.org/docs"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Documentacao Next.js</a
-            >
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Receber novidades</h2>
-        <form action="">
-          <label for="email">O teu melhor email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="example@gmail.com"
-            required
-          />
-          <input type="submit" value="Inscrever-se" />
-        </form>
-      </section>
-    </main>
-
-    <br />
-    <br />
-    <footer>
-      <p>Copyright © 2026 Erasmo Veloso. Todos os direitos reservados.</p>
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-note">
+          <span>Copyright © 2026 Erasmo Veloso. Todos os direitos reservados.</span>
+          <span>Blog detalhe</span>
+        </div>
+      </div>
     </footer>
+
+    <script src="layout.js"></script>
   </body>
 </html>
